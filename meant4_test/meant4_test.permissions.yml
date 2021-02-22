@@ -1,2 +1,5 @@
 access Openweathermap.org api:
   title: 'access Openweathermap.org api'
+access api settings form:
+  title: 'access api settings form'
+  

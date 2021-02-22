@@ -1,0 +1,6 @@
+meant4_test.admin:
+  title: 'Weather Api settings'
+  description: 'Weather Api settings form link'
+  parent: system.admin
+  url: internal:/admin/config/services/weather
+  weight: -91
