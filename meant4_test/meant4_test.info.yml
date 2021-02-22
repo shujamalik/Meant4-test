@@ -1,0 +1,5 @@
+name: Meant4 Test
+description: Meant4 Test for weather api
+core_version_requirement: ^8.8
+package: Custom
+type: module

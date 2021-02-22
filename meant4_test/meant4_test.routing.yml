@@ -1,0 +1,16 @@
+meant4_test.weather:
+  path: '/weather/{city}/{country_code}'
+  defaults:
+    _title: 'Weather Detail'
+    _controller: '\Drupal\meant4_test\Controller\ApiController::getWeatherdata'
+    city: ''
+    country_code: ''
+  requirements:
+    _permission: 'access Openweathermap.org api'
+meant4_test.api_config:
+  path: '/admin/config/services/weather'
+  defaults:
+    _form: '\Drupal\meant4_test\Form\ApiSettingsForm'
+    _title: 'Api Settings'
+  requirements:
+    _permission: 'api settings form'

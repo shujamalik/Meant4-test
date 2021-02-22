@@ -1,0 +1,77 @@
+
+{% if weather_data.cod == 200 %}
+<h2>Weather details of {{ weather_data.name }} on {{ weather_data.dt|date("m/d/Y") }} at {{ weather_data.dt|date("g:i") }}</h2>
+
+<table style="width:100%">
+  <tr>
+    <th>Features</th>
+    <th>Value</th> 
+  </tr>
+  <tr>
+    <td>Id</td>
+    <td>{{ weather_data.id }}</td>
+  </tr>
+  <tr>
+    <td>City</td>
+    <td>{{ weather_data.name }}</td>
+  </tr>
+  <tr>
+    <td>Country Id</td>
+    <td>{{ weather_data.sys.id }}</td>
+  </tr>
+  <tr>
+    <td>Country Code</td>
+    <td>{{ weather_data.sys.country }}</td>
+  </tr>
+  <tr>
+    <td>Latitude</td>
+    <td>{{ weather_data.coord.lat }}</td>
+  </tr>
+  <tr>
+    <td>Longitude</td>
+    <td>{{ weather_data.coord.lon }}</td>
+  </tr>
+  <tr>
+    <td>Weather</td>
+    <td>{{ weather_data.weather.0.main }}</td>
+  </tr>
+  <tr>
+    <td>Temprature</td>
+    <td>{{ weather_data.main.temp }}</td>
+  </tr>
+  <tr>
+    <td>Feels like</td>
+    <td>{{ weather_data.main.feels_like }}</td>
+  </tr>
+  <tr>
+    <td>Temp minimum</td>
+    <td>{{ weather_data.main.temp_min }}</td>
+  </tr>
+  <tr>
+    <td>Temp maximum</td>
+    <td>{{ weather_data.main.temp_max }}</td>
+  </tr>
+  <tr>
+    <td>Pressure</td>
+    <td>{{ weather_data.main.pressure }}</td>
+  </tr>
+  <tr>
+    <td>Humidity</td>
+    <td>{{ weather_data.main.humidity }}</td>
+  </tr>
+  <tr>
+    <td>Visibility</td>
+    <td>{{ weather_data.visibility }}</td>
+  </tr>
+  <tr>
+    <td>Wind speed</td>
+    <td>{{ weather_data.wind.speed }}</td>
+  </tr>
+  <tr>
+    <td>Wind degree</td>
+    <td>{{ weather_data.wind.deg }}</td>
+  </tr>
+</table>
+{% else %}
+<h2>{{ weather_data.message }}</h2>
+{% endif %}

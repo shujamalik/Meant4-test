@@ -1,0 +1,4 @@
+ApiKey: be306854c8951ab7c36943603da82b4d
+default_city: Delhi
+Apiendpoint: 'api.openweathermap.org/data/2.5/weather?q='
+default_country_code: IN

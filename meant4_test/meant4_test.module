@@ -1,0 +1,15 @@
+<?php
+
+function meant4_test_theme($existing, $type, $theme, $path) {
+
+  return [		
+    'meant4_weather_data' => [
+      'template' => 'page-meant4-weather-data',
+      'variables' => [
+        'weather_data' => NULL
+      ],
+    ],
+  ];
+
+}
+?>
